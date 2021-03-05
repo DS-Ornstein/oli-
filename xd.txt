@@ -1,0 +1,39 @@
+--- System Configuration Dialog ---
+
+Would you like to enter the initial configuration dialog? [yes/no]: n
+
+
+Press RETURN to get started!
+
+
+
+Router>enable
+Router#configure terminal
+Enter configuration commands, one per line. End with CNTL/Z.
+Router(config)#hostname Jairo2
+Jairo2(config)#interface Seri
+% Incomplete command.
+Jairo2(config)#interface Serial0/0
+Jairo2(config-if)#ip addres 192
+Jairo2(config-if)#ip address 126.0.0.0 255.255.0.0
+Bad mask /16 for address 126.0.0.0
+Jairo2(config-if)#
+Jairo2(config-if)#exit
+Jairo2(config)#interface Serial0/0
+Jairo2(config-if)#ip address 125.1.10.10 255.255.0.0
+Jairo2(config-if)#
+Jairo2(config-if)#exit
+Jairo2(config)#interface Serial0/0
+Jairo2(config-if)#no shutdown
+
+%LINK-5-CHANGED: Interface Serial0/0, changed state to down
+Jairo2(config-if)#
+Jairo2(config-if)#exit
+Jairo2(config)#interface Serial0/0
+Jairo2(config-if)#exit 
+Jairo2(config)#exit
+Jairo2#
+%SYS-5-CONFIG_I: Configured from console by console
+
+Jairo2#
+Jairo2#
